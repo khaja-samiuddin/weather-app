@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App UI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/87c6f2d1f1.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-900 flex items-center justify-center min-h-screen" style="font-family: 'Poppins', sans-serif;">
+    <!-- Centered Container -->
+    <div class="bg-gradient-to-br from-indigo-500 to-purple-600 w-96 p-8 rounded-3xl shadow-lg text-white text-center">
+        
+        <!-- Title -->
+        <h1 class="text-3xl font-bold">Weather App</h1>
+        <p class="text-sm font-light mb-6 mt-2">Developer: <b>Khaja Samiuddin</b></p>
+        
+        <!-- Search Box with Icon Button -->
+        <div class="flex items-center bg-white rounded-full overflow-hidden mb-4">
+            <input 
+                type="text" 
+                placeholder="Enter City Name" 
+                class="w-full pl-4 py-2 text-gray-700 focus:outline-none city-input"
+            >
+            <button class="px-4 py-2 bg-blue-600 text-white hover:bg-blue-700 focus:outline-none city-search" type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+
+        <!-- Error Message -->
+        <div class="text-red-500 hidden error-message"></div>
+
+        <!-- Main Weather Display -->
+        <div class="main hidden">
+            <!-- Weather Icon -->
+            <div class="my-4 flex items-center justify-center">
+                <img src="" alt="Weather Icon" class="weather-icon w-20 h-20">
+            </div>
+
+            <!-- Temperature and City Name -->
+            <div class="text-6xl font-bold temp mb-2">22°C</div>
+            <div class="text-xl font-medium city-name">City Name</div>
+
+            <!-- Humidity and Wind Speed -->
+            <div class="flex justify-around items-center mt-6 space-x-8">
+                <!-- Humidity -->
+                <div class="flex flex-col items-center">
+                    <img src="images/humidity.png" alt="Humidity Icon" class="w-10 h-10 mb-2">
+                    <span class="text-md humidity">64% Humidity</span>
+                </div>
+                <!-- Wind Speed -->
+                <div class="flex flex-col items-center">
+                    <img src="images/wind.png" alt="Wind Icon" class="w-10 h-10 mb-2">
+                    <span class="text-md wind">18 km/h Wind</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
